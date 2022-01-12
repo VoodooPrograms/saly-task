@@ -31,7 +31,7 @@ services:
         environment:
             APP_SLUG: saly-task
             APP_NAME: Saly
-            WEB_DOCUMENT_ROOT: /app/api/public
+            WEB_DOCUMENT_ROOT: /app/public
             DB_DATABASE: api
         depends_on:
             - mysql_db
