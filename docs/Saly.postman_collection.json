@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "a5358524-ffba-4983-b4fa-dc781d0143fc",
+		"name": "Saly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7070/product",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7070/product/{{uuid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"product",
+						"{{uuid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nazwa produktu",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "2.50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:7070/product",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Inna nazwa produktu",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "3.50",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7070/product/{{uuid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"product",
+						"{{uuid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7070/product/{{uuid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"product",
+						"{{uuid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "export",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7070/product-export?format=xml",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"product-export"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "xml",
+							"description": "xml|csv"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "uuid",
+			"value": "fe412f40-1524-475f-a76f-6d9151472adc"
+		}
+	]
+}
